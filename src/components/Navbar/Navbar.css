@@ -1,0 +1,107 @@
+.app__navbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color:var(--color-black);
+    padding: 1rem 2rem;
+    width: 100%;
+}
+.app__navbar-logo{
+   /* background-color: red; */
+   display: flex;
+   align-items: center;
+   justify-content: flex-start;
+}
+.app__navbar-logo img{
+   width: 150px;
+}
+.app__navbar-links{
+    display: flex;
+    justify-content: center;
+    flex: 1;
+    list-style: none;
+}
+.app__navbar-links li{
+    margin: 0 1rem;
+}
+.app__navbar-links li:hover{
+    color: var(--color-grey);
+}
+
+.app__navbar-login{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+}
+.app__navbar-login a{
+    margin: 0 1rem;
+    transition: 0.8s ease;
+}
+.app__navbar-login a:hover{
+    border-bottom: 2px solid var(--color-golden);
+    
+}
+.app__navbar-login div{
+    width: 1px;
+    height: 30px;
+    background-color: var(--color-grey);
+}
+.app__navbar-smallscreen{
+    display: none;
+}
+.app__navbar-smallscreen_overlay{
+    position: fixed;
+    top: 0;
+    left: 0;
+    transition: 0.5s ease;
+    width: 100%;
+    height: 100vh;
+    background-color: var(--color-black);
+    flex-direction: column;
+}
+.app__navbar-smallscreen_overlay .overlay__close{
+    font-size: 27px;
+    position: absolute;
+    top: 20px;
+    right: 2rem;
+    color: var(--color-golden);
+    cursor: pointer;
+}
+.app__navbar-smallscreen-links{
+    list-style: none;
+}
+.app__navbar-smallscreen-links li{
+    font-family: var(--font-base);
+    color: var(--color-golden);
+    display: flex;
+    text-align: center;
+    margin: 2rem;
+    font-size: 27px;
+
+}
+.app__navbar-smallscreen-links li:hover{
+    color: aliceblue;
+}
+
+@media screen and (max-width:1150px){
+    .app__navbar-links{
+        display: none;
+    }
+    .app__navbar-smallscreen{
+        display: flex;
+    }
+    
+}
+@media screen and (max-width:650px){
+    .app__navbar-login{
+        display: none;
+    }
+    .app__navbar{
+        padding: 1rem;
+    }
+    .app__navbar-logo img{
+        width: 100px;
+    }
+    
+}
